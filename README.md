@@ -25,8 +25,8 @@ Inventory Management System is a comprehensive solution developed using React.js
 
 ## How to Run
 
-1. Clone the repository: git clone https://github.com/your-username/your-repo.git
-2. Navigate to the project directory: cd your-repo
+1. Clone the repository: git clone https://github.com/Kamindu99/inventory-management-system.git
+2. Navigate to the project directory: cd inventory-management-system
 3. Install dependencies for both the frontend and backend: npm install
 4. Configure your MongoDB database credentials in the backend configuration files.
 5. Start the backend server: npm run start-server
