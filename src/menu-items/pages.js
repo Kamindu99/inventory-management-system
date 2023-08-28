@@ -39,35 +39,35 @@ const pages = {
       id: 'ItemRequisition',
       title: 'Item Requisition',
       type: 'item',
-      url: '/sample-page',
+      url: '/item-requisition/list',
       icon: icons.RocketOutlined
     },
     {
       id: 'ItemIssuance',
       title: 'Item Issuance',
       type: 'item',
-      url: '/sample-page',
+      url: '/item-issuance/list',
       icon: icons.GiftOutlined
     },
     {
       id: 'ItemTransfer',
       title: 'Item Transfer',
       type: 'item',
-      url: '/sample-page',
+      url: '/item-transfer/list',
       icon: icons.ExportOutlined
     },
     {
       id: 'Acceptance',
       title: 'Acceptance',
       type: 'item',
-      url: '/sample-page',
+      url: '/acceptance/list',
       icon: icons.CheckSquareOutlined
     },
     {
       id: 'ItemDisposal',
       title: 'Item Disposal',
       type: 'item',
-      url: '/sample-page',
+      url: '/item-disposal/list',
       icon: icons.CloseSquareOutlined
     }
   ]

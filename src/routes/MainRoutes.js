@@ -8,12 +8,12 @@ import MainLayout from 'layout/MainLayout';
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
 
 // render - PurchaseOrder
-const PurchaseOrderList = Loadable(lazy(() => import('pages/PurchaseOrder/PurchaseOrderList/PurchaseOrderList')));
-const PurchaseOrderCreate = Loadable(lazy(() => import('pages/PurchaseOrder/PurchaseOrderCreate/PurchaseOrderCreate')));
+const PurchaseOrderList = Loadable(lazy(() => import('pages/InventoryManagement/PurchaseOrder/PurchaseOrderList/PurchaseOrderList')));
+const PurchaseOrderCreate = Loadable(lazy(() => import('pages/InventoryManagement/PurchaseOrder/PurchaseOrderCreate/PurchaseOrderCreate')));
 
 // render - GoodsReceiveNote
-const GoodsReceiveNoteList = Loadable(lazy(() => import('pages/GoodReceivedNote/GRNList/GrnList')));
-const GoodsReceiveNoteCreate = Loadable(lazy(() => import('pages/GoodReceivedNote/GRNCreate/GRNCreate')));
+const GoodsReceiveNoteList = Loadable(lazy(() => import('pages/InventoryManagement/GoodReceivedNote/GRNList/GrnList')));
+const GoodsReceiveNoteCreate = Loadable(lazy(() => import('pages/InventoryManagement/GoodReceivedNote/GRNCreate/GRNCreate')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
