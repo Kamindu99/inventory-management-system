@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 // material-ui
+import { Button, Grid, Typography } from '@mui/material';
 import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
-import { Grid, Typography } from '@mui/material';
 
 // project imports
 import MainCard from '../MainCard';
@@ -15,6 +15,7 @@ const Breadcrumbs = ({ navigation, title, ...others }) => {
   const location = useLocation();
   const [main, setMain] = useState();
   const [item, setItem] = useState();
+  let navigate = useNavigate();
 
   // set active item state
   const getCollapse = (menu) => {
@@ -51,6 +52,7 @@ const Breadcrumbs = ({ navigation, title, ...others }) => {
   let itemContent;
   let breadcrumbContent = <Typography />;
   let itemTitle = '';
+  let buttonClickDestination = '';
 
   // collapse item
   if (main && main.type === 'collapse') {
@@ -69,6 +71,7 @@ const Breadcrumbs = ({ navigation, title, ...others }) => {
         {itemTitle}
       </Typography>
     );
+    buttonClickDestination = item.buttonClickDestination;
 
     // main
     if (item.breadcrumbs !== false) {
@@ -84,12 +87,27 @@ const Breadcrumbs = ({ navigation, title, ...others }) => {
                 {itemContent}
               </MuiBreadcrumbs>
             </Grid>
-            {title && (
-              <Grid item sx={{ mt: 2 }}>
-                <Typography variant="h5">{item.title}</Typography>
-              </Grid>
-            )}
           </Grid>
+          {title && (
+            <Grid item sx={{ mt: 2 }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Typography variant='h3' style={{ flex: '1' }}>
+                  {item.title}
+                </Typography>
+                {buttonClickDestination != null && (
+                  <Button
+                    style={{ marginRight: '20px' }}
+                    variant="contained"
+                    color="success"
+                    size="medium"
+                    onClick={() => navigate(item.buttonClickDestination ? item.buttonClickDestination : "")}
+                  >
+                    Add New
+                  </Button>
+                )}
+              </div>
+            </Grid>
+          )}
         </MainCard>
       );
     }

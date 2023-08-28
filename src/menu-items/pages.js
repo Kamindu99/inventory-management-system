@@ -26,7 +26,15 @@ const pages = {
       title: 'Purchase Order',
       type: 'item',
       url: '/purchase-order/list',
-      icon: icons.MoneyCollectOutlined
+      icon: icons.MoneyCollectOutlined,
+      buttonClickDestination: '/purchase-order/create'
+    },
+    {
+      id: 'PurchaseOrderCreate',
+      title: 'Purchase Order Create',
+      type: 'collapse',
+      url: '/purchase-order/create',
+      icon: icons.MoneyCollectOutlined,
     },
     {
       id: 'GoodsReceiveNote',
